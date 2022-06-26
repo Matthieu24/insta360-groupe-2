@@ -4,8 +4,8 @@ const otherpic = new PANOLENS.ImagePanorama('img/deck.jpg');
 const otherpic2 = new PANOLENS.ImagePanorama('img/iut.jpg');
 const viewer = new PANOLENS.Viewer({ output: 'console' });
 
-const theta = Math.PI / 10; // hauteur -pi/2 à pi/2
-const phi = Math.PI; // placement sur le cercle à plat - pi à pi, 0 = derrière, pi et -pi devant
+const theta = Math.PI / 1000; // hauteur -pi/2 à pi/2
+const phi = Math.PI - 1.6; // placement sur le cercle à plat - pi à pi, 0 = derrière, pi et -pi devant
 var rayon = panorama.radius;
 console.log("Rayon : " + rayon);
 var position = new THREE.Vector3(
