@@ -1,6 +1,6 @@
 var field = true;
-const panorama = new PANOLENS.ImagePanorama('img/field.jpg');
-const otherpic = new PANOLENS.ImagePanorama('img/foret.jpg');
+const panorama = new PANOLENS.ImagePanorama('img/av-deck.jpg');
+const otherpic = new PANOLENS.ImagePanorama('img/deck.jpg');
 const otherpic2 = new PANOLENS.ImagePanorama('img/iut.jpg');
 const viewer = new PANOLENS.Viewer({ output: 'console' });
 
