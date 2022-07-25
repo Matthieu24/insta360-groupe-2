@@ -17,18 +17,15 @@ var taille = 300;
 
 var infospot = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
 infospot.position.copy(position);
-//        infospot.addHoverText( 'Infospot1');
+//infospot.addHoverText( 'Infospot1');
 infospot.addEventListener('click', onFocus);
 panorama.add(infospot);
 var otherinfo = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
-otherinfo.position.copy(position);
-//        otherinfo.addHoverText( 'Infospot1');
-otherinfo.addEventListener('click', onFocus);
-otherpic.add(otherinfo);
-//auttre image
+otherinfo.position.copy(position);  
+//autre image
 var otherinfo = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
 otherinfo.position.copy(position);
-//        otherinfo.addHoverText( 'Infospot1');
+//otherinfo.addHoverText( 'Infospot1');
 otherinfo.addEventListener('click', onFocus);
 otherpic.add(otherinfo);
 /////////////////////////////////
@@ -42,6 +39,7 @@ function onFocus() {
         viewer.remove(panorama);
         viewer.add(otherpic);
         viewer.setPanorama(otherpic);
+
     } else {
         viewer.remove(otherpic);
         viewer.add(panorama);

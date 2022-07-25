@@ -14,20 +14,22 @@ var position = new THREE.Vector3(
 var taille = 300;
 var infospot = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
 infospot.position.copy(position);
-//        infospot.addHoverText( 'Infospot1');
+
+//infospot.addHoverText( 'Infospot1');
 infospot.addEventListener('click', onFocus);
 panorama.add(infospot);
+
 var otherinfo = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
 otherinfo.position.copy(position);
-//        otherinfo.addHoverText( 'Infospot1');
+
+//otherinfo.addHoverText( 'Infospot1');
 otherinfo.addEventListener('click', onFocus);
 otherpic2.add(otherinfo);
-//auttre image
+
+//autre image
 var otherinfo = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
 otherinfo.position.copy(position);
-//        otherinfo.addHoverText( 'Infospot1');
-otherinfo.addEventListener('click', onFocus);
-otherpic2.add(otherinfo);
+
 /////////////////////////////////
 viewer.add(panorama);
 viewer.render.sortObjects = true;
