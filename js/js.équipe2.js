@@ -14,6 +14,7 @@ var position = new THREE.Vector3(
 );
 
 var taille = 300;
+
 var infospot = new PANOLENS.Infospot(taille * position.length() / rayon, PANOLENS.DataImage.Info);
 infospot.position.copy(position);
 //        infospot.addHoverText( 'Infospot1');
