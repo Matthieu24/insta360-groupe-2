@@ -22,7 +22,10 @@
         const deck = new PANOLENS.ImagePanorama('img/deck.jpg');
         const escalPark = new PANOLENS.ImagePanorama('img/escalier-parking.jpg');
         const parkEtudiant = new PANOLENS.ImagePanorama('img/parking-etudiant.jpg');
-        const viewer = new PANOLENS.Viewer({ output: 'console' });
+        const viewer = new PANOLENS.Viewer({
+            output: 'console',
+            autoHideInfospot: false,
+        });
 
         //----- InfoSpot -----//
 
@@ -71,14 +74,14 @@
         onFocus(parkEtudiant, escalPark, 5733, 240, 420);
 
 
-        function onFocus(avToilette, escalPark, pos1, pos2, pos3) {
+        function onFocus(avToilette, avDeck, pos1, pos2, pos3) {
 
-            var infospot = new PANOLENS.Infospot(300, PANOLENS.DataImage.Arrow);
+            var infospot = new PANOLENS.Infospot(300, PANOLENS.DataImage.Arrow,);
             infospot.position.set(pos1, pos2, pos3);
             infospot.addEventListener("click", () => {
                 viewer.remove(avToilette);
-                viewer.add(escalPark);
-                viewer.setPanorama(escalPark);
+                viewer.add(avDeck);
+                viewer.setPanorama(avDeck);
             });
             avToilette.add(infospot);
             viewer.add(avToilette);
